@@ -3,7 +3,12 @@
 name: 98 OPTIONAL Reference - Build and Run With Docker ARG
 
 on:
-  workflow_dispatch:
+  # Run automatically when app code, tests, or this workflow file changes.
+  push:
+    paths:
+      - "app/**"
+      - "tests/**"
+      - ".github/workflows/04-deploy-exercise.yml"
 
 env:
   IMAGE_NAME: tiny-health-app-arg
