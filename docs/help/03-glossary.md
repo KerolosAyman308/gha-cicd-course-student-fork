@@ -66,11 +66,29 @@ A reusable building block used inside a workflow.
 
 In many workflow files, an action appears with `uses:`.
 
+## ARG
+
+A Dockerfile instruction that lets the build receive a value at build time.
+
+In this course, one exercise uses `ARG BASE_IMAGE` so the workflow can choose the Python base image.
+
 ## Environment Variable
 
 A named value a workflow can reuse.
 
 An environment variable is not automatically secret.
+
+## GitHub Actions Variable
+
+A normal configuration value stored in GitHub settings and read in workflows with `vars`.
+
+It is useful for non-secret values such as ports, image names, or version strings.
+
+## Branch Strategy
+
+A team rule for how branches are used, such as `dev`, `staging`, and `production`.
+
+It helps teams control where code changes go before release.
 
 ## Hosted Runner
 
@@ -93,6 +111,12 @@ It helps us refer to one exact built image.
 ## Matrix
 
 A workflow pattern that repeats the same job across multiple values, such as Python versions or operating systems.
+
+## Needs
+
+A workflow key that makes one job wait for another job first.
+
+It helps make job order explicit in larger workflows.
 
 ## Job
 

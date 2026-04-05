@@ -1,4 +1,4 @@
-name: 01 Hello Workflow
+name: 80 EXERCISE Hello Workflow - PR Merge
 
 on:
   pull_request:
@@ -9,8 +9,8 @@ on:
 
 jobs:
   say-hello:
-    # Only run if the PR was actually merged (not just closed)
-    if: github.event.pull_request.merged == true
+    # Run after a merged pull request, or allow a safe manual run for teaching.
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.merged == true
 
     runs-on: ubuntu-latest
 

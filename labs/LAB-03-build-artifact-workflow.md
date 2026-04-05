@@ -67,7 +67,11 @@ If you want a quick reminder about image tags, use [Artifacts, Images, and Conta
 
 ## Optional: Read the Buildx Version
 
-After the core lab feels clear, you can look at this optional example workflow version:
+After the core lab feels clear, you can continue with this optional challenge:
+
+- [EX-05: Build Artifact with Buildx](../exercises/EX-05-build-artifact-with-buildx.md)
+
+You can also look directly at this optional example workflow version:
 
 `.github/workflows/03-build-artifact-exercise.yml`
 

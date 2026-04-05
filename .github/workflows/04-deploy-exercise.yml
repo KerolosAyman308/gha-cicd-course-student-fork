@@ -1,0 +1,65 @@
+# This exercise stays close to the main deploy lab.
+# It still deploys the saved package after the build workflow succeeds.
+# The only new idea is better deployment visibility after the container starts.
+name: 95 EXERCISE Deploy Workflow - Inspect the Deployment
+
+on:
+  workflow_run:
+    # Listen for the build workflow by name.
+    workflows: ["03 Build Artifact Workflow"]
+    # Start when the build workflow has completed.
+    types: [completed]
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  deploy-package:
+    # Continue only when the build workflow succeeded.
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v8
+        with:
+          name: tiny-health-app-image
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: ${{ github.event.workflow_run.id }}
+          path: downloaded-artifact
+
+      - name: Load Docker image
+        run: docker load --input downloaded-artifact/tiny-health-app.tar
+
+      - name: Start container
+        run: |
+          docker run -d \
+            --name tiny-health-container \
+            -p 8000:8000 \
+            "tiny-health-app:run-${{ github.event.workflow_run.run_number }}"
+
+      - name: Wait for app to become ready
+        run: |
+          for attempt in 1 2 3 4 5; do
+            if curl --fail --silent http://127.0.0.1:8000/health > /dev/null; then
+              exit 0
+            fi
+            echo "Waiting for app to become ready..."
+            sleep 2
+          done
+          echo "App did not become ready in time."
+          exit 1
+
+      - name: Show running containers
+        # This helps students see that the container really started.
+        run: docker ps
+
+      - name: Show health response body
+        # This shows the response body, not only the pass/fail result.
+        run: curl --silent http://127.0.0.1:8000/health
+
+      - name: Stop container
+        if: always()
+        run: docker rm -f tiny-health-container || true

@@ -1,5 +1,5 @@
 # This first workflow is intentionally tiny.
-# It helps s`tudents see what a GitHub Actions run looks like.
+# It helps students see what a GitHub Actions run looks like.
 name: 01 Hello Workflow
 
 on:
@@ -18,4 +18,4 @@ jobs:
     steps:
       - name: Say hello
         # This single step is enough to show a full workflow run.
-        run: echo "Hello from GitHub Actions - this is Ibrahim"
+        run: echo "Hello from GitHub Actions"

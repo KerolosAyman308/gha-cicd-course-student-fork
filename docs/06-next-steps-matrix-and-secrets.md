@@ -71,6 +71,59 @@ This example keeps the trigger manual-only and repeats the CI test job for:
 - Python `3.11`
 - Python `3.12`
 
+### Advanced Repo Example: Matrix Values From a Secret
+
+There is also a more advanced exercise workflow here:
+
+- [02-ci-matrix-from-secret-exercise.yml](../.github/workflows/02-ci-matrix-from-secret-exercise.yml)
+
+This example shows a useful GitHub Actions limitation and workaround:
+
+- `secrets` cannot be used directly inside `strategy.matrix`
+- a first job reads the secret
+- that job passes a normal output forward
+- the matrix job uses that output with `fromJSON(...)`
+
+Simple way to read the workflow:
+
+- first job: prepare the version list
+- second job: run the same CI test flow once per version
+
+Expected secret format:
+
+```json
+["3.11","3.12"]
+```
+
+Important teaching note:
+
+For normal values like Python versions, a repository variable or workflow input is usually a better fit than a secret.
+
+This example is useful mainly for understanding how GitHub Actions contexts and job outputs work.
+
+### Smarter Fixed-Matrix Example: Secret Lookup
+
+There is also a second advanced exercise workflow here:
+
+- [02-ci-matrix-secret-lookup-exercise.yml](../.github/workflows/02-ci-matrix-secret-lookup-exercise.yml)
+
+This version uses a different idea:
+
+- the matrix entries stay fixed in the workflow
+- each matrix entry holds the name of a secret
+- the workflow reads the real version with `secrets[matrix.version_secret]`
+
+Why this is useful:
+
+- it is simpler than the two-job workaround
+- it works well when you already know the small fixed set of matrix runs
+- it still teaches a useful GitHub Actions expression pattern
+
+Important difference:
+
+- use the `from-secret` workflow when the whole matrix list must come from one secret
+- use the `secret-lookup` workflow when the matrix is already known and each job just needs to read a different secret
+
 ## Secrets Management
 
 ### Short Answer
@@ -105,12 +158,19 @@ That means the value comes from GitHub's stored secrets.
 - do not print secrets in logs
 - treat secrets as protected inputs, not normal text values
 
-## Environment Variables versus Secrets
+## Variables, Environment Variables, and Secrets
 
 Use this short rule:
 
-- environment variable = normal configuration value
+- GitHub Actions variable = normal configuration value stored in repository settings
+- environment variable = reusable value written inside the workflow YAML
 - secret = sensitive value that must be protected
+
+Examples of values that usually fit `vars` better than `secrets`:
+
+- port numbers
+- image names
+- Python base image tags
 
 ## When to Learn These Next
 

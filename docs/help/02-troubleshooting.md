@@ -97,7 +97,7 @@ Check these things:
 
 ## I See Extra Workflows in the `Actions` Tab
 
-That can happen because the repository also contains optional example workflows.
+That can happen because the repository also contains challenge and optional example workflows.
 
 For the main course, focus on:
 
@@ -106,7 +106,7 @@ For the main course, focus on:
 - `03 Build Artifact Workflow`
 - `04 Deploy Workflow`
 
-If you are in the main course labs, ignore optional workflows unless your instructor tells you to use them.
+If you are in the main course labs, ignore workflows whose names start with `EXERCISE` or `OPTIONAL` unless your instructor tells you to use them.
 
 ## I Accidentally Ran an Optional Workflow
 

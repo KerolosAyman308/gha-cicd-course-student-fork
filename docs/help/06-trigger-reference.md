@@ -71,6 +71,13 @@ Important note:
 
 Schedules use UTC time.
 
+Also remember:
+
+- the workflow file must exist on the default branch
+- the run may start later than the exact minute
+
+That is why `schedule` is useful to learn, but not the best trigger for a live classroom demo.
+
 ## API Trigger: `repository_dispatch`
 
 `repository_dispatch` lets an external system start a workflow through the GitHub API.
@@ -91,6 +98,17 @@ Example idea:
 Path filtering lets a workflow run only when specific files change.
 
 In this course, we use path filtering to keep runs focused on the relevant files.
+
+## Path Ignore Filtering
+
+`paths-ignore` lets a workflow skip runs when only certain files changed.
+
+Teams often use it when they do not want documentation-only or note-only edits to trigger the same checks as application code changes.
+
+Simple example idea:
+
+- run the workflow for app and test files
+- skip the workflow when only `docs/**` changed
 
 ## Simple Memory Rule
 

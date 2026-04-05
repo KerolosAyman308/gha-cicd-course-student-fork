@@ -1,0 +1,73 @@
+# This exercise combines the main CI lab and the main artifact lab.
+# Job 1 verifies the app first.
+# Job 2 packages the app only after CI passes.
+# The packaging job uses a simple fixed matrix with no secrets.
+# In this version, the matrix value also chooses the Docker base image,
+# so each uploaded artifact is genuinely different.
+name: 94 EXERCISE CI Then Build Artifact With needs
+
+on:
+  # Keep this exercise manual-only so it stays outside the core lab path.
+  workflow_dispatch:
+
+env:
+  IMAGE_NAME: tiny-health-app
+
+jobs:
+  run-tests:
+    # This is the main CI lab job.
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Run tests
+        run: python -m unittest discover -s tests -v
+
+  build-package:
+    # This job starts only after the CI job succeeds.
+    needs: run-tests
+
+    strategy:
+      # Let both matrix runs finish so students can compare them.
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12"]
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Show active Python version
+        run: python --version
+
+      - name: Build Docker image
+        run: |
+          docker build \
+            -f Dockerfile.arg-base \
+            --build-arg BASE_IMAGE="python:${{ matrix.python-version }}-slim" \
+            -t "${IMAGE_NAME}:${{ matrix.python-version }}" \
+            .
+
+      - name: Save Docker image as artifact file
+        run: docker save "${IMAGE_NAME}:${{ matrix.python-version }}" -o "tiny-health-app-${{ matrix.python-version }}.tar"
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: tiny-health-app-${{ matrix.python-version }}
+          path: tiny-health-app-${{ matrix.python-version }}.tar
+          retention-days: 7

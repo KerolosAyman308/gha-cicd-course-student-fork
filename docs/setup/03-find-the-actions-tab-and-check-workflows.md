@@ -34,9 +34,16 @@ If you do not see any workflow runs yet, that is okay.
 
 The first lab will create the first run.
 
-If you also see workflows with names that start with `OPTIONAL`, do not worry.
+If you also see workflows with names that start with `EXERCISE` or `OPTIONAL`, do not worry.
 
-Those are extra example workflows and are not part of the core starting path.
+Those are extra challenge or example workflows and are not part of the core starting path.
+
+At the start of the course, open only these workflow names:
+
+- `01 Hello Workflow`
+- `02 CI Workflow`
+- `03 Build Artifact Workflow`
+- `04 Deploy Workflow`
 
 ## Step 4: If GitHub Asks You to Enable Workflows
 

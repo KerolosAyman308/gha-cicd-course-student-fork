@@ -1,18 +1,11 @@
-# This is the first real CI workflow in the course.
-# It verifies a change by running tests on a fresh runner.
-name: 02 CI Workflow
+# This is a challenge version of the first real CI workflow.
+# It keeps the CI story, but adds visibility steps and a schedule example.
+name: 81 EXERCISE CI Workflow - Visibility and Schedule
 
 on:
   schedule:
     - cron: "05 11 * * 6"
-  # Run automatically when app code, tests, or this workflow file changes.
-  # push:
-  #   paths:
-  #     - "app/**"
-  #     - "tests/**"
-  #     - ".github/workflows/02-ci.yml"
-  #     - ".github/workflows/02-ci-exercise.yml"
-  # Allow a safe manual run before students trigger it with a code change.
+  # Keep a manual trigger too, because schedules are not the best live-class trigger.
   workflow_dispatch:
 
 jobs:

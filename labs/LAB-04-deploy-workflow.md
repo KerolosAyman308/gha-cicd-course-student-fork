@@ -124,3 +124,14 @@ After the lab, try to answer these questions:
 - Why is it useful to deploy the saved artifact?
 - What problem does the smoke test help us catch?
 - How is this different from testing source code only?
+
+## Challenge After Lab 04
+
+If your instructor wants one small deploy challenge after this lab, continue with:
+
+- [EX-07: Deploy and Inspect the Deployment](../exercises/EX-07-deploy-inspect-the-deployment.md)
+- [EX-08: Build and Run With GitHub Variables](../exercises/EX-08-build-and-run-with-github-variables.md)
+
+These challenges are focused concept drills.
+
+They are useful for practice, but they do not replace the main lab story of deploying the saved artifact from an earlier workflow.

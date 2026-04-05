@@ -143,7 +143,9 @@ Open the `Actions` tab.
 
 Open `90 OPTIONAL Full Containerized CI/CD Workflow`.
 
-Open the newest run.
+Click `Run workflow`.
+
+Then open the newest run.
 
 ## Step 8: Follow the Jobs in Order
 

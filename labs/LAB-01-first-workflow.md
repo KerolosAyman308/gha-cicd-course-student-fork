@@ -132,3 +132,9 @@ After the lab, try to answer these questions:
 - Where did the job run?
 - What is the difference between a workflow and a step?
 - Where do you look first when a run fails?
+
+## Challenge After Lab 01
+
+If your instructor wants one small challenge after this lab, continue with:
+
+- [EX-01: Hello Trigger and PR Merge](../exercises/EX-01-hello-trigger-and-pr-merge.md)
