@@ -66,6 +66,20 @@ If a workflow fails:
 
 Do not change many files at once before you understand the failure.
 
+## Example of a Failed Step
+
+Add a screenshot here in a future course update showing one failed workflow run.
+
+Placeholder screenshot target:
+
+`docs/images/actions-failed-step-example.png`
+
+When that screenshot is added, label these three things:
+
+- workflow name
+- failed step
+- first useful error
+
 ## Example Questions to Ask Yourself
 
 When reading logs, ask:

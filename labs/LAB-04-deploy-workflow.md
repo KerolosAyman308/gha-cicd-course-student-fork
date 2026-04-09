@@ -26,6 +26,7 @@ This workflow teaches delivery using the package created earlier:
 - `workflow_run` starts deploy after the build workflow finishes
 - `Download build artifact` gets the saved package
 - `Load Docker image` restores that package as an image
+- `Recreate image tag from build run` rebuilds the same date-plus-run-id tag
 - `Start container` runs the exact same tagged image from the build run
 - `Smoke test deployed app` checks that the app responds
 
@@ -67,6 +68,7 @@ Look for these steps:
 
 - `Download build artifact`
 - `Load Docker image`
+- `Recreate image tag from build run`
 - `Start container`
 - `Smoke test deployed app`
 
@@ -85,6 +87,11 @@ This workflow is important because it uses the exact packaged output from the bu
 It is not rebuilding the app.
 
 It is loading and running the same tagged image that the build workflow already created.
+
+In this course, that tag is based on:
+
+- the build date
+- the GitHub run ID
 
 That is the delivery idea we wanted to reach in this course.
 
@@ -125,13 +132,13 @@ After the lab, try to answer these questions:
 - What problem does the smoke test help us catch?
 - How is this different from testing source code only?
 
-## Challenge After Lab 04
+## Exercises After Lab 04
 
-If your instructor wants one small deploy challenge after this lab, continue with:
+After this lab, continue with:
 
 - [EX-07: Deploy and Inspect the Deployment](../exercises/EX-07-deploy-inspect-the-deployment.md)
 - [EX-08: Build and Run With GitHub Variables](../exercises/EX-08-build-and-run-with-github-variables.md)
 
-These challenges are focused concept drills.
+These exercises are focused concept drills.
 
-They are useful for practice, but they do not replace the main lab story of deploying the saved artifact from an earlier workflow.
+They extend the main lab story of deploying the saved artifact from an earlier workflow.

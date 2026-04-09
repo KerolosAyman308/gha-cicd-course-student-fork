@@ -55,6 +55,17 @@ Teams often use it for:
 - review checks
 - policy checks
 
+You can also narrow pull request activity with `types:`.
+
+Common examples:
+
+- `opened`
+- `synchronize`
+- `reopened`
+- `closed`
+
+That is useful in later exercises where one workflow runs during review and another runs only after a pull request is closed and merged.
+
 We do not need it in the core beginner labs because the browser-first course flow uses direct commits for simplicity.
 
 ## Scheduled Trigger: `schedule`

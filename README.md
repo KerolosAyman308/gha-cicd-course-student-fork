@@ -33,8 +33,9 @@ If you see workflows with names that include `EXERCISE` or `OPTIONAL`, ignore th
 
 Use this quick rule in the `Actions` tab:
 
-- core path = `01`, `02`, `03`, `04`
-- challenge path = only the `EXERCISE` workflow named in the matching exercise page
+- main path = the lab or exercise page your instructor is teaching now
+- core workflows = `01`, `02`, `03`, `04`
+- exercise workflows = only the `EXERCISE` workflow named in the matching exercise page, or the workflow file the page asks you to create
 - optional path = `OPTIONAL` workflows and later examples
 
 ## Before Class
@@ -62,9 +63,12 @@ Open these files during Day 1:
 6. [Exercise 01: Hello Trigger and PR Merge](exercises/EX-01-hello-trigger-and-pr-merge.md)
 7. [How to Read Actions Logs](docs/help/01-how-to-read-actions-logs.md)
 8. [Lab 02: Real CI Workflow](labs/LAB-02-real-ci-workflow.md)
-9. [Challenge Exercises Index](exercises/README.md)
+9. [Exercise 02: CI Visibility and Schedule](exercises/EX-02-ci-visibility-and-schedule.md)
+10. [Exercise 03: CI Matrix](exercises/EX-03-ci-matrix.md)
+11. [Exercise 04: CI Secrets and Matrix Patterns](exercises/EX-04-ci-secrets-and-matrix.md)
+12. [Exercises Index](exercises/README.md)
 
-Challenge exercises are always based on a completed lab.
+Exercises always follow the related lab.
 
 Use these supporting pages only when you need them:
 
@@ -83,26 +87,23 @@ What do we deliver after the code is verified?
 
 Open these files during Day 2:
 
-1. [Final Recap](docs/04-final-recap.md)
+1. [Day 2 Opening Bridge](docs/day-2-opening-bridge.md)
 2. [Exercise 06: CI Then Build Artifact With `needs`](exercises/EX-06-ci-then-build-artifact-with-needs.md)
 3. [Artifacts, Images, and Containers](docs/02-artifacts-images-and-containers.md)
 4. [Lab 03: Build Artifact Workflow](labs/LAB-03-build-artifact-workflow.md)
-5. [Simulated Deployment](docs/03-simulated-deployment.md)
-6. [Lab 04: Deploy Workflow](labs/LAB-04-deploy-workflow.md)
-7. [Lab 05: Full CI/CD Flow](labs/LAB-05-full-cicd-flow.md)
+5. [Exercise 05: Build Artifact with Buildx](exercises/EX-05-build-artifact-with-buildx.md)
+6. [Simulated Deployment](docs/03-simulated-deployment.md)
+7. [Lab 04: Deploy Workflow](labs/LAB-04-deploy-workflow.md)
+8. [Exercise 07: Deploy and Inspect the Deployment](exercises/EX-07-deploy-inspect-the-deployment.md)
+9. [Exercise 08: Build and Run With GitHub Variables](exercises/EX-08-build-and-run-with-github-variables.md)
+10. [Lab 05: Full CI/CD Flow](labs/LAB-05-full-cicd-flow.md)
+11. [Exercise 09: Full Flow Failure and Recovery](exercises/EX-09-full-flow-failure-and-recovery.md)
+12. [Exercise 10: PR-Based CI/CD with Branch Protection](exercises/EX-10-pr-based-ci-cd-with-branch-protection.md)
+13. [Final Recap](docs/04-final-recap.md)
 
-`EX-06` is the Day 2 bridge challenge.
+`EX-06` is the guided Day 2 bridge.
 
-Use it right after the recap to connect Day 1 CI ideas to Day 2 packaging ideas.
-
-Other Day 2 challenge work should come only after the related core lab is complete.
-
-Optional Day 2 challenges:
-
-- [EX-05: Build Artifact with Buildx](exercises/EX-05-build-artifact-with-buildx.md)
-- [EX-07: Deploy and Inspect the Deployment](exercises/EX-07-deploy-inspect-the-deployment.md)
-- [EX-08: Build and Run With GitHub Variables](exercises/EX-08-build-and-run-with-github-variables.md)
-- [EX-09: Full Flow Failure and Recovery](exercises/EX-09-full-flow-failure-and-recovery.md)
+The later Day 2 exercises continue the same course story after each related lab.
 
 ## Optional Next Steps
 
@@ -116,7 +117,7 @@ Use these after the main course if you want a little more context:
 6. [Next Steps: Matrix and Secrets](docs/06-next-steps-matrix-and-secrets.md)
 7. [Full Containerized CI/CD Example](docs/07-full-containerized-cicd-example.md)
 8. [How ACR and AKS Fit the Story](docs/08-how-acr-and-aks-fit-the-story.md)
-9. [Challenge Exercises Index](exercises/README.md)
+9. [Exercises Index](exercises/README.md)
 10. [91 OPTIONAL Example - Azure ACR and AKS Workflow](.github/workflows/06-azure-acr-aks-example.yml)
 11. [Lab 06: Full Containerized CI/CD Pipeline](labs/LAB-06-full-containerized-cicd-pipeline.md)
 

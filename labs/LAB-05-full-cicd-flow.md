@@ -155,12 +155,17 @@ After the lab, try to answer these questions:
 - Why did deploy use the saved artifact instead of rebuilding?
 - Which part of GitHub Actions now feels more familiar than it did on Day 1?
 
-## Challenge After Lab 05
+## Exercises After Lab 05
 
-If your instructor wants one final capstone challenge at the end of Day 2, continue with:
+After this lab, continue with:
 
 - [EX-09: Full Flow Failure and Recovery](../exercises/EX-09-full-flow-failure-and-recovery.md)
+- [EX-10: PR-Based CI/CD with Branch Protection](../exercises/EX-10-pr-based-ci-cd-with-branch-protection.md)
 
-This challenge keeps the same core workflows and asks one important question:
+`EX-09` keeps the same core workflows and asks one important question:
 
 What should happen to the full story when verification fails, and what should happen after the fix?
+
+`EX-10` adds one final team workflow question:
+
+How should CI, CD, pull requests, and branch protection work together before and after code reaches `main`?

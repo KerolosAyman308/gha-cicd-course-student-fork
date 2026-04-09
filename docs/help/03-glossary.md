@@ -90,6 +90,12 @@ A team rule for how branches are used, such as `dev`, `staging`, and `production
 
 It helps teams control where code changes go before release.
 
+## Branch Protection Rule
+
+A GitHub repository rule that protects a branch such as `main`.
+
+Teams often use it to require pull requests and required status checks before merge.
+
 ## Hosted Runner
 
 A runner started and managed for you by GitHub.
@@ -104,7 +110,7 @@ A packaged version of the application.
 
 ## Image Tag
 
-A readable label attached to a Docker image, such as `run-123`.
+A readable label attached to a Docker image, such as `2026-04-08-123456789`.
 
 It helps us refer to one exact built image.
 
@@ -130,11 +136,17 @@ The detailed output produced while a workflow step runs.
 
 A common Docker image tag name.
 
-It is convenient, but it is less precise than a traceable tag such as `run-123`.
+It is convenient, but it is less precise than a traceable tag such as `2026-04-08-123456789`.
 
 ## Push
 
 To send local commits to GitHub.
+
+## Pull Request
+
+A proposed change that asks to merge one branch into another.
+
+Teams often use pull requests for review, discussion, and automated checks before merge.
 
 ## Marketplace
 
@@ -157,6 +169,12 @@ The machine that runs the workflow job.
 ## Secret
 
 A protected sensitive value such as a token or password.
+
+## Status Check
+
+A pass or fail result reported back to GitHub for a workflow job or other integration.
+
+In branch protection, a required status check must pass before merge.
 
 ## Self-Hosted Runner
 

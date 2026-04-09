@@ -35,10 +35,11 @@ jobs:
         run: python -m unittest discover -s tests -v
 
       - name: Set image tag
-        # Create one traceable tag for this workflow run.
+        # Use today's UTC date plus the GitHub run ID.
         id: image-tag
         run: |
-          IMAGE_TAG="run-${GITHUB_RUN_NUMBER}"
+          TODAY="$(date -u +%Y-%m-%d)"
+          IMAGE_TAG="${TODAY}-${GITHUB_RUN_ID}"
           echo "image_tag=$IMAGE_TAG" >> "$GITHUB_OUTPUT"
 
       - name: Set up Docker Buildx

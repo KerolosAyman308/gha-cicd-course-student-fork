@@ -99,6 +99,8 @@ Check these things:
 
 That can happen because the repository also contains challenge and optional example workflows.
 
+This is normal in the current student repo because challenge workflows are still included for this course cycle.
+
 For the main course, focus on:
 
 - `01 Hello Workflow`

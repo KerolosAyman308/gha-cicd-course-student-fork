@@ -82,7 +82,7 @@ This is one plain `docker build` shape used in this repository:
 
 ```bash
 docker build \
-  -t "tiny-health-app:run-123" \
+  -t "tiny-health-app:2026-04-08-123456789" \
   -t "tiny-health-app:latest" \
   .
 ```
@@ -93,7 +93,7 @@ This is good for learning:
 - add tags
 - save it as an artifact
 
-In the core build workflow, the course keeps the tag story simpler and uses one traceable run tag.
+In the core build workflow, the course keeps the tag story simpler and uses one date-plus-run-id tag.
 
 In this optional fuller example, you also see `latest` so students can recognize a common real-world pattern.
 
@@ -104,7 +104,7 @@ This is a common cloud-shaped version:
 ```bash
 docker buildx build \
   --push \
-  --tag "example.azurecr.io/tiny-health-app:run-123" \
+  --tag "example.azurecr.io/tiny-health-app:2026-04-08-123456789" \
   --tag "example.azurecr.io/tiny-health-app:latest" \
   .
 ```
@@ -160,7 +160,7 @@ Confirm that the tests passed.
 Confirm that:
 
 - the Docker image was built
-- a simple image tag was created
+- a simple date-plus-run-id tag was created
 - the image was tagged more than once
 - the image artifact was uploaded
 
@@ -255,6 +255,6 @@ After the lab, try to answer these questions:
 
 - What made this workflow feel more production-like?
 - Which parts were still the same as the smaller beginner workflows?
-- Why is a simple image tag useful?
+- Why is a date-plus-run-id image tag useful?
 - Why might a real team push a tagged image to ACR?
 - Why is it better to deploy the built image than to rebuild again later?

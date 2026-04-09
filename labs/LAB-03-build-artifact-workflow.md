@@ -28,7 +28,7 @@ This workflow keeps the CI check and adds packaging:
 
 - `workflow_dispatch` lets you run it manually
 - `Run tests` verifies the code before packaging
-- `Set image tag` creates one simple tag for this workflow run
+- `Set image tag` creates one simple date-plus-run-id tag for this workflow run
 - `Build Docker image with docker build` creates the package
 - `Save Docker image as artifact file` turns the image into a saved file
 - `Upload build artifact` stores that file for later use
@@ -50,7 +50,7 @@ The core packaging command in this lab is:
 
 ```bash
 docker build \
-  -t "tiny-health-app:run-123" \
+  -t "tiny-health-app:2026-04-08-123456789" \
   .
 ```
 
@@ -58,20 +58,20 @@ What this means:
 
 - `docker build` builds an image from the `Dockerfile`
 - `-t` adds a tag to the image
-- `run-123` stands for one traceable tag for one build
+- `2026-04-08-123456789` stands for today's UTC date plus the GitHub run ID
 - `.` means "build using the current folder"
 
 For this course, this is the simplest build shape to learn.
 
 If you want a quick reminder about image tags, use [Artifacts, Images, and Containers](../docs/02-artifacts-images-and-containers.md).
 
-## Optional: Read the Buildx Version
+## Exercise After Lab 03
 
-After the core lab feels clear, you can continue with this optional challenge:
+After this lab, continue with:
 
 - [EX-05: Build Artifact with Buildx](../exercises/EX-05-build-artifact-with-buildx.md)
 
-You can also look directly at this optional example workflow version:
+You can also look directly at this exercise workflow version:
 
 `.github/workflows/03-build-artifact-exercise.yml`
 
@@ -89,7 +89,7 @@ That means the story stays the same:
 3. the image is exported as a tar file
 4. the tar file is uploaded as a GitHub artifact
 
-Use this optional version when you want to compare:
+Use this exercise when you want to compare:
 
 - a simple raw Docker command path
 - a reusable-action path that many real workflows use
@@ -194,6 +194,7 @@ After the lab, try to answer these questions:
 
 - Why is a build artifact useful?
 - Why are image tags useful?
+- Why is today's date plus the GitHub run ID a simple useful tag?
 - Why is an image different from a container?
 - Why is saving the packaged output better than relying only on source code?
 - How is the Buildx version of this workflow similar to the plain `docker build` version?

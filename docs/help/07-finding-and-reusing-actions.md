@@ -191,6 +191,12 @@ The safest beginner method is:
 
 Do not invent the `uses:` syntax from memory if the page already gives you the correct example.
 
+Short rule:
+
+Copy the action version from the official docs or action page you are using now.
+
+Do not guess the version from memory.
+
 ## Simple Beginner Safety Rules for Using Actions
 
 Prefer actions that:

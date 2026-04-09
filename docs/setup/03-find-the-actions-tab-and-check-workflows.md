@@ -47,6 +47,16 @@ At the start of the course, open only these workflow names:
 - `03 Build Artifact Workflow`
 - `04 Deploy Workflow`
 
+## What the Actions Page Looks Like
+
+Add a screenshot here in a future course update so students can match the page quickly.
+
+Placeholder screenshot target:
+
+`docs/images/actions-page-core-workflows.png`
+
+On that future screenshot, visually mark the four core workflows and remind students to ignore `EXERCISE` and `OPTIONAL` entries unless the instructor asks for them.
+
 ## Step 4: If GitHub Asks You to Enable Workflows
 
 In many student repositories, GitHub Actions is already ready to use.

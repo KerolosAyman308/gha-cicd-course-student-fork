@@ -4,6 +4,14 @@
 
 This is a challenge based on `LAB-02`.
 
+## Important Note
+
+This exercise shows advanced GitHub Actions patterns.
+
+It is useful for learning how expressions, matrix values, and secrets can interact.
+
+It is not the default way to handle normal configuration values like version numbers or ports.
+
 The matrix exercise showed how one job can repeat across multiple values.
 
 Now imagine the team says one of these:
@@ -47,7 +55,7 @@ Use this when the matrix entries are already known and each job only needs to re
 - dynamic secret lookup
 - choosing the simplest pattern for the real need
 
-## Important Note
+## Beginner Reality Check
 
 Python versions are usually not secret in real life.
 

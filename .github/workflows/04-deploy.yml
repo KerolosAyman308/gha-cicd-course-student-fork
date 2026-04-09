@@ -40,13 +40,21 @@ jobs:
         # Turn the saved artifact file back into a Docker image.
         run: docker load --input downloaded-artifact/tiny-health-app.tar
 
+      - name: Recreate image tag from build run
+        # Rebuild the same date-plus-run-id tag the build workflow created.
+        id: image-tag
+        run: |
+          BUILD_DATE="$(echo "${{ github.event.workflow_run.created_at }}" | cut -dT -f1)"
+          IMAGE_TAG="${BUILD_DATE}-${{ github.event.workflow_run.id }}"
+          echo "image_tag=$IMAGE_TAG" >> "$GITHUB_OUTPUT"
+
       - name: Start container
         # Start the exact same tagged image that the build workflow created.
         run: |
           docker run -d \
             --name tiny-health-container \
             -p 8000:8000 \
-            "tiny-health-app:run-${{ github.event.workflow_run.run_number }}"
+            "tiny-health-app:${{ steps.image-tag.outputs.image_tag }}"
 
       - name: Smoke test deployed app
         # Retry a few times because app startup can take a moment.

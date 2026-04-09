@@ -1,12 +1,12 @@
-# Challenge Exercises
+# Exercises
 
 ## Purpose
 
-These pages turn the extra workflow ideas into short problem statements.
+These pages turn the workflow ideas into short problem statements.
 
-Use them after the relevant core lab is stable.
+Use them after the relevant lab in the course sequence.
 
-Every exercise in this folder is a challenge based on a specific lab.
+Every exercise in this folder is based on a specific lab.
 
 That means:
 
@@ -19,7 +19,7 @@ The teaching sequence should be:
 1. explain the concept
 2. complete the core lab
 3. let students practice the core lab
-4. add the matching challenge exercise
+4. complete the matching exercise
 
 ## Important Note
 
@@ -27,7 +27,11 @@ For now, the exercise workflow files also exist in this repository.
 
 During live training, your instructor may still choose to introduce those workflow files step by step.
 
-## Day 1 Challenge Path
+The final PR and branch-protection exercise is different.
+
+In that exercise, you create the workflow files yourself.
+
+## Day 1 Exercise Path
 
 After [LAB-01: First Workflow](../labs/LAB-01-first-workflow.md):
 
@@ -39,9 +43,15 @@ After [LAB-02: Real CI Workflow](../labs/LAB-02-real-ci-workflow.md):
 2. [EX-03: CI Matrix](EX-03-ci-matrix.md)
 3. [EX-04: CI Secrets and Matrix Patterns](EX-04-ci-secrets-and-matrix.md)
 
-## Day 2 Challenge Path
+## Day 2 Exercise Path
 
-At the beginning of Day 2, after the recap:
+`EX-06` is the instructor-guided Day 2 bridge exercise.
+
+`EX-09` is the full CI/CD recovery exercise.
+
+`EX-10` is the final team workflow exercise.
+
+At the beginning of Day 2, after the opening bridge:
 
 1. [EX-06: CI Then Build Artifact With `needs`](EX-06-ci-then-build-artifact-with-needs.md)
 
@@ -57,3 +67,4 @@ After [LAB-04: Deploy Workflow](../labs/LAB-04-deploy-workflow.md):
 At the end of Day 2, after [LAB-05: Full CI/CD Flow](../labs/LAB-05-full-cicd-flow.md):
 
 1. [EX-09: Full Flow Failure and Recovery](EX-09-full-flow-failure-and-recovery.md)
+2. [EX-10: PR-Based CI/CD with Branch Protection](EX-10-pr-based-ci-cd-with-branch-protection.md)

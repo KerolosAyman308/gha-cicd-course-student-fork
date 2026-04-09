@@ -83,12 +83,15 @@ We reduce moving parts first so students can clearly learn:
 
 ## How This Connects to the Hands-On Path
 
-Use this order:
+Use this core order:
 
 1. [GitHub Actions Foundations](10-github-actions-foundations.md)
 2. [LAB-01: First Workflow](../labs/LAB-01-first-workflow.md)
-3. [EX-01: Hello Trigger and PR Merge](../exercises/EX-01-hello-trigger-and-pr-merge.md)
-4. [LAB-02: Real CI Workflow](../labs/LAB-02-real-ci-workflow.md)
+3. [LAB-02: Real CI Workflow](../labs/LAB-02-real-ci-workflow.md)
+
+If your instructor wants one small extension after `LAB-01`, continue with:
+
+- [EX-01: Hello Trigger and PR Merge](../exercises/EX-01-hello-trigger-and-pr-merge.md)
 
 ## Reflection
 
@@ -97,4 +100,3 @@ Before the first lab, try to answer:
 - What repeated team problem is CI solving?
 - Why is automation alone not enough?
 - Why might a team separate development, staging, and production work?
-

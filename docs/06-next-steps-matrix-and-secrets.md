@@ -101,6 +101,8 @@ For normal values like Python versions, a repository variable or workflow input 
 
 This example is useful mainly for understanding how GitHub Actions contexts and job outputs work.
 
+This is a useful pattern exercise, not the recommended default for normal non-sensitive configuration.
+
 ### Smarter Fixed-Matrix Example: Secret Lookup
 
 There is also a second advanced exercise workflow here:
@@ -123,6 +125,8 @@ Important difference:
 
 - use the `from-secret` workflow when the whole matrix list must come from one secret
 - use the `secret-lookup` workflow when the matrix is already known and each job just needs to read a different secret
+
+This is also a useful pattern exercise, not the recommended default for normal non-sensitive configuration.
 
 ## Secrets Management
 

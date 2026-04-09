@@ -41,7 +41,7 @@ This is one simple `docker build` shape used in this repository:
 
 ```bash
 docker build \
-  -t "tiny-health-app:run-123" \
+  -t "tiny-health-app:2026-04-08-123456789" \
   -t "tiny-health-app:latest" \
   .
 ```
@@ -53,7 +53,7 @@ This shape teaches:
 - keep the image inside the workflow runner
 - save it as a GitHub artifact if needed
 
-In the core build workflow, we keep the tag story very simple and use one traceable run tag.
+In the core build workflow, we keep the tag story very simple and use one date-plus-run-id tag.
 
 In the optional fuller example, you can also see a `latest` tag added for comparison.
 
@@ -64,7 +64,7 @@ This is a common cloud-shaped version:
 ```bash
 docker buildx build \
   --push \
-  --tag "example.azurecr.io/tiny-health-app:run-123" \
+  --tag "example.azurecr.io/tiny-health-app:2026-04-08-123456789" \
   --tag "example.azurecr.io/tiny-health-app:latest" \
   .
 ```
@@ -141,7 +141,7 @@ This part is the packaging step plus registry upload.
 
 Look for these ideas:
 
-- one simple image tag is created
+- one simple image tag is created from the date and run ID
 - the workflow logs in to ACR
 - the image is built
 - the image is pushed to ACR

@@ -119,6 +119,8 @@ env:
 
 Use that when the value should live in GitHub settings instead of directly in the workflow file.
 
+`vars` comes from GitHub settings; `env` is written inside the YAML file.
+
 ## Safe Beginner Habits
 
 - edit one block at a time

@@ -55,6 +55,18 @@ Create:
 - `PYTHON_BASE_IMAGE` = `python:3.12-slim`
 - `APP_PORT` = `8000`
 
+## Where to Create Repository Variables
+
+Use this GitHub path:
+
+`Settings -> Secrets and variables -> Actions -> Variables`
+
+Repository variables are not workflow `env`, and they are not secrets.
+
+Placeholder screenshot target for a future course image:
+
+`docs/images/repository-variables-page.png`
+
 ## Challenge Files
 
 Prepared files:

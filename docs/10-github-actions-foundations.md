@@ -16,7 +16,7 @@ Use this sequence:
 4. understand the shape of a workflow
 5. run a first workflow
 6. run a real CI workflow
-7. try challenge exercises only after the core lab is stable
+7. complete the matching exercises after each lab
 
 ## What GitHub Actions Is
 
@@ -121,12 +121,10 @@ These are important, but they are not all part of the beginner core path.
 In this repo:
 
 - the core labs focus first on workflow shape and CI verification
-- the challenge exercises introduce matrix and secret patterns
+- the exercises introduce matrix and secret patterns after the related lab
 - the larger optional workflows make `needs` easier to see
 
-## Hands-On Order
-
-For Day 1, use this order:
+## Day 1 Course Path
 
 1. [LAB-01: First Workflow](../labs/LAB-01-first-workflow.md)
 2. [EX-01: Hello Trigger and PR Merge](../exercises/EX-01-hello-trigger-and-pr-merge.md)
@@ -139,6 +137,7 @@ For Day 1, use this order:
 ## Related Pages
 
 - [Engineering Problems, CI/CD, and Branching Strategy](09-engineering-problems-cicd-and-branching.md)
+- [Exercises Index](../exercises/README.md)
 - [Trigger Reference](help/06-trigger-reference.md)
 - [YAML Cheatsheet for GitHub Actions](help/04-yaml-cheatsheet.md)
 - [Finding and Reusing GitHub Actions](help/07-finding-and-reusing-actions.md)

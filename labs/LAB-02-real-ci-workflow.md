@@ -127,15 +127,15 @@ After the lab, try to answer these questions:
 - What is the value of running tests automatically on push?
 - Which step gives the main verification result?
 
-## Challenge Exercises After Lab 02
+## Exercises After Lab 02
 
-After the core lab is complete, use these challenge documents in order if your instructor asks you to keep going:
+After the lab is complete, continue with these exercises in order:
 
 1. [EX-02: CI Visibility and Schedule](../exercises/EX-02-ci-visibility-and-schedule.md)
 2. [EX-03: CI Matrix](../exercises/EX-03-ci-matrix.md)
 3. [EX-04: CI Secrets and Matrix Patterns](../exercises/EX-04-ci-secrets-and-matrix.md)
 
-These challenge exercises extend the same CI story.
+These exercises extend the same CI story.
 
 They are useful for:
 
@@ -144,4 +144,4 @@ They are useful for:
 - seeing how one job can repeat across versions
 - understanding where secrets fit in a workflow
 
-They are not required for the core Lab 02 success check.
+They are the normal follow-up after Lab 02.

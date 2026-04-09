@@ -17,7 +17,7 @@ the packaging job must wait until the CI job succeeds.
 
 This is a guided Day 2 bridge challenge.
 
-Use it with your instructor right after the recap.
+Use it with your instructor right after the opening bridge.
 
 The goal is to connect Day 1 CI ideas to Day 2 packaging ideas.
 
