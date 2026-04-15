@@ -8,6 +8,8 @@
 
 Keep the same packaging story from Lab 03, but use reusable Docker actions instead of raw Docker commands where possible.
 
+This exercise keeps the same packaging goal from `LAB-03` and changes only the build implementation style.
+
 ## Build
 
 Create this workflow file yourself:

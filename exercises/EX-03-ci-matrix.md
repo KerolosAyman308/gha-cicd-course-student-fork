@@ -8,6 +8,8 @@
 
 Run the same CI job on Python `3.11` and `3.12` without copying the whole job twice.
 
+This exercise keeps the same CI story from `LAB-02` and changes only how many versions the job runs against.
+
 ## Build
 
 Create this workflow file yourself:

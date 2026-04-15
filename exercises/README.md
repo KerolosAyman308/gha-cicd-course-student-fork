@@ -6,10 +6,16 @@ These exercises come after the matching lab.
 
 Use them to build the next step yourself.
 
+Labs introduce the base workflow idea.
+
+Exercises extend that lab in one clear direction.
+
 ## Simple Rules
 
 - do the lab first
 - then do the exercise
+- do not rebuild the same lab task again
+- use the exercise to change or extend one idea from the lab
 - create the exercise workflow file yourself when the page asks for one
 - solution workflows live only in the instructor repo
 
@@ -42,9 +48,12 @@ After [LAB-03: Build Artifact Workflow](../labs/LAB-03-build-artifact-workflow.m
 After [LAB-04: Deploy Workflow](../labs/LAB-04-deploy-workflow.md):
 
 1. [EX-07: Deploy and Inspect the Deployment](EX-07-deploy-inspect-the-deployment.md)
-2. [EX-08: Build and Run With GitHub Variables](EX-08-build-and-run-with-github-variables.md)
 
 After [LAB-05: Full CI/CD Flow](../labs/LAB-05-full-cicd-flow.md):
 
 1. [EX-09: Full Flow Failure and Recovery](EX-09-full-flow-failure-and-recovery.md)
 2. [EX-10: PR-Based CI/CD with Branch Protection](EX-10-pr-based-ci-cd-with-branch-protection.md)
+
+After [LAB-07: Final Assessment Setup and Validation Prep](../labs/LAB-07-docker-hub-vm-deploy.md):
+
+1. [EX-11: Final Deployment Assessment](EX-11-final-deployment-assessment.md)

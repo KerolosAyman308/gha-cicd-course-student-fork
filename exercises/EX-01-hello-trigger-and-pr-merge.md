@@ -10,6 +10,8 @@ Take the tiny hello workflow and change the trigger story.
 
 Instead of reacting to a simple direct change, make it react to a pull request being merged into `main`.
 
+This exercise keeps the tiny workflow from `LAB-01` and changes only when it should run.
+
 ## Build
 
 Create this workflow file yourself:

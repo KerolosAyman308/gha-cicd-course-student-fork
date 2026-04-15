@@ -11,6 +11,10 @@ Practice two advanced GitHub Actions patterns:
 1. build a matrix from one stored secret
 2. keep a fixed matrix and look up a different secret in each run
 
+This exercise extends `LAB-02`.
+
+It does not replace the base CI workflow. It compares two more advanced matrix patterns.
+
 ## Important Note
 
 This exercise is for learning GitHub Actions behavior.

@@ -71,23 +71,9 @@ After this lab, continue with:
 
 - [EX-05: Build Artifact with Buildx](../exercises/EX-05-build-artifact-with-buildx.md)
 
-In `EX-05`, create a Buildx-based version of this workflow yourself.
+`EX-05` keeps the same packaging story and asks you to rebuild it with Buildx-based actions.
 
-That version keeps the same story but uses reusable Docker actions instead of raw Docker commands where possible:
-
-- `docker/setup-buildx-action` prepares Buildx
-- `docker/build-push-action` builds the image
-- the Buildx step exports a Docker image tar file directly
-- `actions/upload-artifact` still uploads the packaged output
-
-That means the story stays the same:
-
-1. tests pass
-2. the image is built and tagged
-3. the image is exported as a tar file
-4. the tar file is uploaded as a GitHub artifact
-
-Use this exercise when you want to compare:
+Use that exercise when you want to compare:
 
 - a simple raw Docker command path
 - a reusable-action path that many real workflows use
@@ -198,3 +184,15 @@ After the lab, try to answer these questions:
 - Why is an image different from a container?
 - Why is saving the packaged output better than relying only on source code?
 - How is the Buildx version of this workflow similar to the plain `docker build` version?
+
+## Assessment Preparation Link
+
+Later, the final assessment uses the same packaging ideas again:
+
+- one exact image tag
+- one exact built output
+- one deployable package carried forward
+
+If you want to see how this lab prepares you for that track, use:
+
+- [How the Current Labs Prepare You](../docs/assessment/04-how-current-labs-prepare-you.md)

@@ -14,6 +14,8 @@ The goal is to prove three things clearly:
 - the Python version came from `actions/setup-python`
 - the runner calculates time in a way that matters later for `schedule`
 
+This exercise keeps the same CI test step from `LAB-02` and adds visibility around it.
+
 ## Build
 
 Create this workflow file yourself:

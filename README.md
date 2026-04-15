@@ -38,7 +38,9 @@ Use this quick rule in the `Actions` tab:
 - main path = the lab or exercise page your instructor is teaching now
 - core workflows = `01`, `02`, `03`, `04`
 - exercise workflows = create them yourself only when the matching exercise page asks you to do that
-- optional path = workflows `05`, `06`, and later examples
+- final assessment prep workflow = `07`
+- final assessment workflow = create `08` yourself later when the final assessment page asks you to
+- optional next-step examples = workflows `05`, `06`, and later example pages
 
 ## Before Class
 
@@ -97,15 +99,43 @@ Open these files during Day 2:
 6. [Simulated Deployment](docs/03-simulated-deployment.md)
 7. [Lab 04: Deploy Workflow](labs/LAB-04-deploy-workflow.md)
 8. [Exercise 07: Deploy and Inspect the Deployment](exercises/EX-07-deploy-inspect-the-deployment.md)
-9. [Exercise 08: Build and Run With GitHub Variables](exercises/EX-08-build-and-run-with-github-variables.md)
-10. [Lab 05: Full CI/CD Flow](labs/LAB-05-full-cicd-flow.md)
-11. [Exercise 09: Full Flow Failure and Recovery](exercises/EX-09-full-flow-failure-and-recovery.md)
-12. [Exercise 10: PR-Based CI/CD with Branch Protection](exercises/EX-10-pr-based-ci-cd-with-branch-protection.md)
-13. [Final Recap](docs/04-final-recap.md)
+9. [Lab 05: Full CI/CD Flow](labs/LAB-05-full-cicd-flow.md)
+10. [Exercise 09: Full Flow Failure and Recovery](exercises/EX-09-full-flow-failure-and-recovery.md)
+11. [Exercise 10: PR-Based CI/CD with Branch Protection](exercises/EX-10-pr-based-ci-cd-with-branch-protection.md)
+12. [Final Recap](docs/04-final-recap.md)
 
 `EX-06` is the guided Day 2 bridge.
 
 The later Day 2 exercises continue the same course story after each related lab.
+
+`LAB-05` is the integration lab that reuses workflows `02`, `03`, and `04`.
+
+## Final Assessment
+
+After the main Day 2 path and the related exercises, your instructor may give you one final assessed exercise.
+
+It keeps the same story and asks you to build one fuller deployment workflow yourself:
+
+- build a Docker image
+- push it to Docker Hub
+- deploy that same image to an Ubuntu VM over SSH
+
+Open these files in order:
+
+1. [Final Assessment Support Overview](docs/assessment/README.md)
+2. [Standardized Assessment Setup](docs/assessment/01-standardized-assessment-setup.md)
+3. [Prepare the Ubuntu VM](docs/assessment/02-prepare-ubuntu-vm.md)
+4. [Configure Docker Hub, SSH, and GitHub Secrets](docs/assessment/03-configure-secrets-and-ssh.md)
+5. [How the Current Labs Prepare You](docs/assessment/04-how-current-labs-prepare-you.md)
+6. [LAB-07: Final Assessment Setup and Validation Prep](labs/LAB-07-docker-hub-vm-deploy.md)
+7. [EX-11: Final Deployment Assessment](exercises/EX-11-final-deployment-assessment.md)
+8. [Assessment Success Criteria and Rubric](docs/assessment/05-success-criteria-and-rubric.md)
+
+`LAB-07` uses one preloaded readiness workflow to check the setup.
+
+`EX-11` is the build-it-yourself part.
+
+You create the final assessment workflow file yourself, and the prepared solution lives only in the instructor repo.
 
 ## Optional Next Steps
 
@@ -119,9 +149,8 @@ Use these after the main course if you want a little more context:
 6. [Next Steps: Matrix and Secrets](docs/06-next-steps-matrix-and-secrets.md)
 7. [Full Containerized CI/CD Example](docs/07-full-containerized-cicd-example.md)
 8. [How ACR and AKS Fit the Story](docs/08-how-acr-and-aks-fit-the-story.md)
-9. [Exercises Index](exercises/README.md)
-10. [91 OPTIONAL Example - Azure ACR and AKS Workflow](.github/workflows/06-azure-acr-aks-example.yml)
-11. [Lab 06: Full Containerized CI/CD Pipeline](labs/LAB-06-full-containerized-cicd-pipeline.md)
+9. [91 OPTIONAL Example - Azure ACR and AKS Workflow](.github/workflows/06-azure-acr-aks-example.yml)
+10. [Lab 06: Full Containerized CI/CD Pipeline](labs/LAB-06-full-containerized-cicd-pipeline.md)
 
 ## If You Feel Stuck
 

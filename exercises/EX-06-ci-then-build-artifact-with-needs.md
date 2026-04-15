@@ -16,6 +16,10 @@ Build one manual workflow with two jobs:
 
 The build job must wait for CI by using `needs`.
 
+This exercise is a bridge between `LAB-02` and `LAB-03`.
+
+It connects those ideas in one file, but it does not replace either lab.
+
 ## Guided Note
 
 This is the guided Day 2 bridge exercise.
