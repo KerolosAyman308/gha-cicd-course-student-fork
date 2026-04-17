@@ -26,23 +26,32 @@ Your VM should be able to:
 
 This repository includes:
 
+- `scripts/install-assessment-deps.sh`
 - `scripts/assessment/prepare-ubuntu-vm.sh`
 - `scripts/assessment/prepare-local-machine.sh` for optional local support checks
 
-Use `prepare-ubuntu-vm.sh` mainly for the Docker-based assessment path.
+Use `scripts/install-assessment-deps.sh` as the main script.
 
-It installs the common VM dependencies used in that path:
+Use `scripts/assessment/prepare-ubuntu-vm.sh` only as a thin shortcut wrapper if you want the older shorter command.
 
+The main script installs or checks the common VM dependencies used in this path:
+
+- Git
+- SSH client tools
 - Docker
 - curl
-- firewall rule for port `8000`
+- `wget`
+- `unzip`
+- `jq`
+- common networking tools
+- firewall and port `8000` checks
 
 ## One Practical Way to Use the Script
 
-From your repository on your machine, copy the script to the VM:
+From your repository on your machine, copy the main script to the VM:
 
 ```bash
-scp scripts/assessment/prepare-ubuntu-vm.sh <vm-user>@<vm-host>:~/
+scp scripts/install-assessment-deps.sh <vm-user>@<vm-host>:~/
 ```
 
 Then connect to the VM:
@@ -54,6 +63,15 @@ ssh <vm-user>@<vm-host>
 Run the script with `sudo`:
 
 ```bash
+chmod +x ~/install-assessment-deps.sh
+sudo ~/install-assessment-deps.sh --target-user <vm-user>
+```
+
+If you want the shorter wrapper command instead, you can still use:
+
+```bash
+scp scripts/assessment/prepare-ubuntu-vm.sh <vm-user>@<vm-host>:~/
+ssh <vm-user>@<vm-host>
 chmod +x ~/prepare-ubuntu-vm.sh
 sudo ~/prepare-ubuntu-vm.sh <vm-user>
 ```
@@ -75,6 +93,12 @@ docker ps
 
 If `docker ps` asks for root permission, sign out and sign back in once so the Docker group change can apply.
 
+If you want the script to validate the machine again later without reinstalling packages, run:
+
+```bash
+bash ~/install-assessment-deps.sh --check-only --target-user <vm-user>
+```
+
 ## Port Check
 
 Your deployed app will use port `8000`.
@@ -94,3 +118,7 @@ This preparation step removes the most common remote-deployment blockers before 
 When this page is done, continue with:
 
 - [Configure Docker Hub, SSH, and GitHub Secrets](03-configure-secrets-and-ssh.md)
+
+If you want the full script details again, return to:
+
+- [Install Assessment Dependencies](06-install-assessment-dependencies.md)

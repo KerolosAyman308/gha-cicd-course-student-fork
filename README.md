@@ -11,6 +11,15 @@ We will follow one simple story through the whole course:
 3. package
 4. deliver
 
+## Start Here
+
+Use these four entry points to navigate the repository:
+
+1. [Student Setup Guide](docs/setup/README.md)
+2. [Labs Guide](labs/README.md)
+3. [Exercises Index](exercises/README.md)
+4. [Help Guide](docs/help/README.md)
+
 ## How to Use This Repository During Class
 
 - Open the section for the part of the course we are in now.
@@ -33,6 +42,14 @@ At the start of the course, focus on the four core workflows first.
 
 Later in the course, some exercises will ask you to create new workflow files yourself.
 
+Use this simple rule:
+
+- core beginner path = workflows `01` to `04` and Labs `01` to `05`
+- `LAB-05` is still part of the guided Day 2 continuation
+- `LAB-05` does not correspond to workflow `05`
+- later guided extension = `LAB-07` and `EX-11` when your instructor starts the Ubuntu VM assessment path
+- optional examples = workflow examples `05`, `06`, `LAB-06`, and the cloud-oriented extra reading
+
 Use this quick rule in the `Actions` tab:
 
 - main path = the lab or exercise page your instructor is teaching now
@@ -46,10 +63,11 @@ Use this quick rule in the `Actions` tab:
 
 Use these files first:
 
-1. [Git and GitHub Micro Prerequisites](docs/setup/00-git-and-github-micro-prerequisites.md)
-2. [Create a GitHub Account](docs/setup/01-create-github-account.md)
-3. [Create Your Course Repository from the Template](docs/setup/02-create-your-course-repo-from-template.md)
-4. [Find the Actions Tab and Check Workflows](docs/setup/03-find-the-actions-tab-and-check-workflows.md)
+1. [Setup Guide](docs/setup/README.md)
+2. [Git and GitHub Micro Prerequisites](docs/setup/00-git-and-github-micro-prerequisites.md)
+3. [Create a GitHub Account](docs/setup/01-create-github-account.md)
+4. [Create Your Course Repository from the Template](docs/setup/02-create-your-course-repo-from-template.md)
+5. [Find the Actions Tab and Check Workflows](docs/setup/03-find-the-actions-tab-and-check-workflows.md)
 
 ## Day 1
 
@@ -71,6 +89,7 @@ Open these files during Day 1:
 10. [Exercise 03: CI Matrix](exercises/EX-03-ci-matrix.md)
 11. [Exercise 04: CI Secrets and Matrix Patterns](exercises/EX-04-ci-secrets-and-matrix.md)
 12. [Exercises Index](exercises/README.md)
+13. [Labs Guide](labs/README.md)
 
 Exercises always follow the related lab.
 
@@ -103,6 +122,7 @@ Open these files during Day 2:
 10. [Exercise 09: Full Flow Failure and Recovery](exercises/EX-09-full-flow-failure-and-recovery.md)
 11. [Exercise 10: PR-Based CI/CD with Branch Protection](exercises/EX-10-pr-based-ci-cd-with-branch-protection.md)
 12. [Final Recap](docs/04-final-recap.md)
+13. [Labs Guide](labs/README.md)
 
 `EX-06` is the guided Day 2 bridge.
 
@@ -124,18 +144,32 @@ Open these files in order:
 
 1. [Final Assessment Support Overview](docs/assessment/README.md)
 2. [Standardized Assessment Setup](docs/assessment/01-standardized-assessment-setup.md)
-3. [Prepare the Ubuntu VM](docs/assessment/02-prepare-ubuntu-vm.md)
-4. [Configure Docker Hub, SSH, and GitHub Secrets](docs/assessment/03-configure-secrets-and-ssh.md)
-5. [How the Current Labs Prepare You](docs/assessment/04-how-current-labs-prepare-you.md)
-6. [LAB-07: Final Assessment Setup and Validation Prep](labs/LAB-07-docker-hub-vm-deploy.md)
-7. [EX-11: Final Deployment Assessment](exercises/EX-11-final-deployment-assessment.md)
-8. [Assessment Success Criteria and Rubric](docs/assessment/05-success-criteria-and-rubric.md)
+3. [Prepare the Assessment VM](docs/setup/04-prepare-assessment-vm.md)
+4. [Prepare the Ubuntu VM](docs/assessment/02-prepare-ubuntu-vm.md)
+5. [Configure Docker Hub, SSH, and GitHub Secrets](docs/assessment/03-configure-secrets-and-ssh.md)
+6. [How the Current Labs Prepare You](docs/assessment/04-how-current-labs-prepare-you.md)
+7. [LAB-07: Final Assessment Setup and Validation Prep](labs/LAB-07-docker-hub-vm-deploy.md)
+8. [EX-11: Final Deployment Assessment](exercises/EX-11-final-deployment-assessment.md)
+9. [Assessment Success Criteria and Rubric](docs/assessment/05-success-criteria-and-rubric.md)
 
 `LAB-07` uses one preloaded readiness workflow to check the setup.
 
 `EX-11` is the build-it-yourself part.
 
 You create the final assessment workflow file yourself, and the prepared solution lives only in the instructor repo.
+
+## Assessment Prep
+
+Use this only when your instructor asks you to prepare the Ubuntu VM assessment path.
+
+The early course flow stays browser-first.
+
+You do not need the assessment VM setup script before Day 1 or the early labs.
+
+When the assessment path starts, use:
+
+- [Prepare the Assessment VM](docs/setup/04-prepare-assessment-vm.md)
+- `scripts/install-assessment-deps.sh`
 
 ## Optional Next Steps
 
@@ -156,11 +190,12 @@ Use these after the main course if you want a little more context:
 
 Use these support files:
 
-1. [Runner Mental Model](docs/help/00-runner-mental-model.md)
-2. [How to Read Actions Logs](docs/help/01-how-to-read-actions-logs.md)
-3. [Troubleshooting](docs/help/02-troubleshooting.md)
-4. [Glossary](docs/help/03-glossary.md)
-5. [YAML Cheatsheet for GitHub Actions](docs/help/04-yaml-cheatsheet.md)
+1. [Help Guide](docs/help/README.md)
+2. [Runner Mental Model](docs/help/00-runner-mental-model.md)
+3. [How to Read Actions Logs](docs/help/01-how-to-read-actions-logs.md)
+4. [Troubleshooting](docs/help/02-troubleshooting.md)
+5. [Glossary](docs/help/03-glossary.md)
+6. [YAML Cheatsheet for GitHub Actions](docs/help/04-yaml-cheatsheet.md)
 
 ## One Reminder
 

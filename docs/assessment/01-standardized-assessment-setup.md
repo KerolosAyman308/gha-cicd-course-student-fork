@@ -23,9 +23,9 @@ The course standard is:
 - deploy it on an Ubuntu VM over SSH
 - run it as a Docker container on that VM
 
-## Why Docker Is Still the Default
+## Why Docker Is The Standard
 
-The Docker mode balances simplicity and realism well:
+This Docker setup balances simplicity and realism well:
 
 - simpler than ACR or ECR
 - more directly aligned with the current packaging labs
@@ -47,7 +47,7 @@ You should always be able to answer:
 
 "What exact thing did I deploy?"
 
-In Docker mode, the answer is one clear Docker image tag:
+In this assessment, the answer is one clear Docker image tag:
 
 `YYYY-MM-DD-GITHUB_RUN_ID`
 
@@ -59,8 +59,6 @@ That same tagged image is:
 - started as the deployed container
 
 ## Docker Hub Repository Shape
-
-Use this section only if your cohort is using Docker mode.
 
 For this course, keep the Docker Hub side simple:
 

@@ -34,7 +34,7 @@ Use it as the final reference for:
 
 - `/health` responds successfully
 - `/version` responds with build details
-- `/status` responds with runtime visibility such as hostname, environment, or deployment mode
+- `/status` responds with runtime visibility such as hostname, environment, or image tag
 
 ### 5. Explanation
 
@@ -51,7 +51,7 @@ Use this simple rubric:
 |---|---|
 | verification | tests pass in the workflow |
 | output | one clear deployable output is prepared and traceable |
-| deployment | the VM runs the intended updated app for the chosen mode |
+| deployment | the VM runs the intended updated container |
 | validation | the app responds on the expected port and endpoints |
 | explanation | the student can describe the deployed output clearly |
 

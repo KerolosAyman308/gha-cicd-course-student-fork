@@ -47,21 +47,27 @@ This setup keeps the deployment target real enough to matter, but still simple e
 
 This assessment support set also includes small support scripts:
 
-- `scripts/assessment/prepare-ubuntu-vm.sh` mainly prepares a Docker-mode Ubuntu VM with Docker, curl, and port `8000`
-- `scripts/assessment/prepare-local-machine.sh` checks or prepares a local machine for SSH and validation support
+- `scripts/install-assessment-deps.sh` is the main install-and-check script for Ubuntu VMs and local Ubuntu checks
+- `scripts/assessment/prepare-ubuntu-vm.sh` is a focused wrapper for VM preparation
+- `scripts/assessment/prepare-local-machine.sh` is a quick local helper that defaults to a check-only pass
 - `scripts/assessment/validate-deployment.sh` checks `/health`, `/version`, and `/status` after deployment
 
 Use them to reduce setup friction and to validate the deployed app clearly.
 
+If you want the full script guidance first, open:
+
+- [Prepare the Assessment VM](../setup/04-prepare-assessment-vm.md)
+
 ## Recommended File Order
 
 1. [Standardized Assessment Setup](01-standardized-assessment-setup.md)
-2. [Prepare the Ubuntu VM](02-prepare-ubuntu-vm.md)
-3. [Configure Docker Hub, SSH, and GitHub Secrets](03-configure-secrets-and-ssh.md)
-4. [How the Current Labs Prepare You](04-how-current-labs-prepare-you.md)
-5. [LAB-07: Final Assessment Setup and Validation Prep](../../labs/LAB-07-docker-hub-vm-deploy.md)
-6. [EX-11: Final Deployment Assessment](../../exercises/EX-11-final-deployment-assessment.md)
-7. [Assessment Success Criteria and Rubric](05-success-criteria-and-rubric.md)
+2. [Prepare the Assessment VM](../setup/04-prepare-assessment-vm.md)
+3. [Prepare the Ubuntu VM](02-prepare-ubuntu-vm.md)
+4. [Configure Docker Hub, SSH, and GitHub Secrets](03-configure-secrets-and-ssh.md)
+5. [How the Current Labs Prepare You](04-how-current-labs-prepare-you.md)
+6. [LAB-07: Final Assessment Setup and Validation Prep](../../labs/LAB-07-docker-hub-vm-deploy.md)
+7. [EX-11: Final Deployment Assessment](../../exercises/EX-11-final-deployment-assessment.md)
+8. [Assessment Success Criteria and Rubric](05-success-criteria-and-rubric.md)
 
 ## One Important Note
 

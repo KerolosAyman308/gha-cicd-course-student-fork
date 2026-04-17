@@ -6,13 +6,11 @@ This page shows the minimum setup needed before the final assessment workflow ca
 
 ## GitHub Secrets to Create
 
-Every assessment mode needs these repository secrets:
+For this course, create these repository secrets:
 
 - `VM_HOST`
 - `VM_USER`
 - `VM_SSH_KEY`
-
-If your cohort uses the Docker mode, also create:
 
 - `DOCKERHUB_USERNAME`
 - `DOCKERHUB_TOKEN`
@@ -24,8 +22,6 @@ Open:
 Create the secrets listed above in this page.
 
 ## Docker Hub Setup
-
-Use this section only if your cohort is using Docker mode.
 
 You need:
 
@@ -84,6 +80,12 @@ If you want one quick local support check before the lab, you can also run:
 bash scripts/assessment/prepare-local-machine.sh
 ```
 
+If you want the full local Ubuntu dependency check directly, run:
+
+```bash
+bash scripts/install-assessment-deps.sh --check-only
+```
+
 ## What Should Be True Before You Run LAB-07 or EX-11
 
 Before you run `LAB-07` and later build the final assessment workflow, all items below should be true:
@@ -92,8 +94,6 @@ Before you run `LAB-07` and later build the final assessment workflow, all items
 - the VM is reachable on port `8000`
 - the VM secrets are saved
 - one manual SSH login from your machine has already worked
-
-If your cohort uses Docker mode, also confirm:
 
 - the Docker Hub repository exists and is public
 - the Docker Hub secrets are saved

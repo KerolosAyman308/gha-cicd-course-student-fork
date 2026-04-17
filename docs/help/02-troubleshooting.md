@@ -15,6 +15,8 @@ Use this order when you feel stuck:
 3. use [How to Read Actions Logs](01-how-to-read-actions-logs.md)
 4. return here for the matching recovery section
 
+If you want the full help index first, open [Help Guide](README.md).
+
 ## I Cannot Find the `Actions` Tab
 
 Try these checks:

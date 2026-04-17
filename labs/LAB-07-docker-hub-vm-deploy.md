@@ -29,8 +29,10 @@ Use these support files alongside it:
 
 - `docs/assessment/README.md`
 - `docs/assessment/01-standardized-assessment-setup.md`
+- `docs/setup/04-prepare-assessment-vm.md`
 - `docs/assessment/02-prepare-ubuntu-vm.md`
 - `docs/assessment/03-configure-secrets-and-ssh.md`
+- `scripts/install-assessment-deps.sh`
 - `scripts/assessment/prepare-ubuntu-vm.sh`
 - `scripts/assessment/prepare-local-machine.sh`
 - `scripts/assessment/validate-deployment.sh`
@@ -41,8 +43,9 @@ Use these pages in this order:
 
 1. [Final Assessment Support Overview](../docs/assessment/README.md)
 2. [Standardized Assessment Setup](../docs/assessment/01-standardized-assessment-setup.md)
-3. [Prepare the Ubuntu VM](../docs/assessment/02-prepare-ubuntu-vm.md)
-4. [Configure Docker Hub, SSH, and GitHub Secrets](../docs/assessment/03-configure-secrets-and-ssh.md)
+3. [Prepare the Assessment VM](../docs/setup/04-prepare-assessment-vm.md)
+4. [Prepare the Ubuntu VM](../docs/assessment/02-prepare-ubuntu-vm.md)
+5. [Configure Docker Hub, SSH, and GitHub Secrets](../docs/assessment/03-configure-secrets-and-ssh.md)
 
 You should already be comfortable with:
 
@@ -72,10 +75,10 @@ It only checks whether the final assessment setup is ready.
 Use:
 
 ```bash
-scp scripts/assessment/prepare-ubuntu-vm.sh <vm-user>@<vm-host>:~/
+scp scripts/install-assessment-deps.sh <vm-user>@<vm-host>:~/
 ssh <vm-user>@<vm-host>
-chmod +x ~/prepare-ubuntu-vm.sh
-sudo ~/prepare-ubuntu-vm.sh <vm-user>
+chmod +x ~/install-assessment-deps.sh
+sudo ~/install-assessment-deps.sh --target-user <vm-user>
 ```
 
 Then confirm on the VM:
